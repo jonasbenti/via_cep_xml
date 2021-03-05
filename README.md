@@ -11,9 +11,9 @@ Observações:
 - A pasta images possui 2 imagens do buscador, uma buscando CEPs ja cadastrados no BD e outra buscando CEPs novos atráves da API via_cep; 
 <br>
 Melhorias futuras:
-- Realizar a busca utilizando AJAX;
-- Melhorar Layout das telas;
-- Criar uma tela inicial com as opções (Buscar endereço pelo CEP, Buscar endereço pela cidade, listar todos os CEPs cadastrados);
+- Realizar a busca utilizando AJAX;<br>
+- Melhorar Layout das telas;<br>
+- Criar uma tela inicial com as opções (Buscar endereço pelo CEP, Buscar endereço pela cidade, listar todos os CEPs cadastrados);<br>
 
 
 <br>Observações:
