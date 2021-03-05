@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Busca de de CEP</title>
+    <!--<link href="css/form.css" rel="stylesheet" type="text/css" media="screen"/>-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+</head>
+<body>
+    
+<div class="container">
+        <h3>Busca de de CEP</h3>
+        <form enctype="multipart/form-data"  method="post" action="index.php?class=CepForm&method=findCep">
+        <div class="form-group">
+            <label>Cep</label>
+            <input name="cep" class="form-control" type="text"style="width: 15%" required onkeypress="$(this).mask('00000-000')">
+        </div>  
+        
+        <input type="submit" class="btn btn-primary" value="Buscar CEP"><br><br>
+
+        <div class="form-group">
+            <label>Cep</label>
+            <input name="cep2" class="form-control" readonly="1" type="text"style="width: 15%" value="{cep2}">
+        </div>  
+
+        <div class="form-group">
+            <label>Estado</label>
+            <input name="estado" class="form-control" readonly="1" type="text" style="width: 10%"
+             value="{estado}">
+        </div>
+
+
+        <div class="form-group">
+            <label>Cidade</label>
+            <input name="cidade" class="form-control" readonly="1" type="text" style="width: 50%"
+             value="{cidade}">
+        </div>
+
+        <div class="form-group">
+            <label>Bairro</label>
+            <input name="bairro" class="form-control" type="text" style="width: 50%"
+             value="{bairro}">
+        </div>
+
+        <div class="form-group">
+            <label>Rua</label>
+            <input name="rua" class="form-control" type="text" style="width: 50%"
+             value="{rua}">
+
+        </div>            
+  
+        <div class="form-group">
+            <label>IBGE</label>
+            <input name="ibge" readonly="1" class="form-control" style="width: 15%"
+             value="{ibge}">
+        </div>       
+               
+       
+    </form>
+    
+</div>
+
+   
+  
+    
+</body>
+</html>
