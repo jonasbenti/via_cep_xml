@@ -4,7 +4,6 @@ Projeto para realizar buscar CEP através da API via cep retornando um XML.
 Requisitos Minimos:<br>
 - PHP7;<br>
 - Mysql 5.7;<br>
-<<<<<<< HEAD
 <br>
 Observações:
 - Salvar os CEPs já inseridos no campo de busca é necessario alterar os parâmetros no arquivo config/cep_conf.ini e renomear para cep.ini;
@@ -14,15 +13,12 @@ Observações:
 Melhorias futuras:
 - Realizar a busca utilizando AJAX;
 - Melhorar Layout das telas;
-- Criar uma tela inicial com as opções (Buscar endereço pelo CEP, Buscar endereço pela cidade, listar todos os CEPs cadastrados));
+- Criar uma tela inicial com as opções (Buscar endereço pelo CEP, Buscar endereço pela cidade, listar todos os CEPs cadastrados);
 
 
-
-
-=======
 <br>Observações:
 - Salvar os CEPs já inseridos no campo de busca é necessario alterar os parâmetros no arquivo config/cep_conf.ini e renomear para cep.ini;
 
 - na pasta db esta o dump com alguns CEPs ja inseridos;
->>>>>>> origin
+
 
