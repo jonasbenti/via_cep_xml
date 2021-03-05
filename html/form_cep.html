@@ -2,7 +2,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Busca de de CEP</title>
+    <title>Busca de CEP</title>
     <!--<link href="css/form.css" rel="stylesheet" type="text/css" media="screen"/>-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -12,7 +12,7 @@
 <body>
     
 <div class="container">
-        <h3>Busca de de CEP</h3>
+        <h3>Busca de CEP</h3>
         <form enctype="multipart/form-data"  method="post" action="index.php?class=CepForm&method=findCep">
         <div class="form-group">
             <label>Cep</label>
@@ -22,7 +22,7 @@
         <input type="submit" class="btn btn-primary" value="Buscar CEP"><br><br>
 
         <div class="form-group">
-            <label>Cep</label>
+            <label>Cep {cep_novo}</label>
             <input name="cep2" class="form-control" readonly="1" type="text"style="width: 15%" value="{cep2}">
         </div>  
 
@@ -50,7 +50,13 @@
             <input name="rua" class="form-control" type="text" style="width: 50%"
              value="{rua}">
 
-        </div>            
+        </div>     
+        
+        <div class="form-group">
+            <label>DDD</label>
+            <input name="ddd" readonly="1" class="form-control" style="width: 15%"
+             value="{ddd}">
+        </div>   
   
         <div class="form-group">
             <label>IBGE</label>

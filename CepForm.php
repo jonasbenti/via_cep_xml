@@ -15,7 +15,9 @@
         'bairro' => null,
         'logradouro' => null,
         'ibge' => null,
-        'mensagem' => null
+        'mensagem' => null,
+        'ddd' => null,
+        'cep_novo' => null
         ];
         }
 
@@ -25,14 +27,14 @@
             {
                 $cep = $param['cep'];
                 $this->data = Cep::validateCep($cep);
-
+                
                 if(empty($this->data)) //verifica se deu erro ao validar validateCep
                 {
                     $this->data = Cep::findDb($cep);//busca no Banco de dados
                     if (empty($this->data)) //Se não encontrou o cep no DB, busca no viacep
                     {
                         $this->data = Cep::getCep($cep);
-                        Cep::save($this->data);                    
+                        if(Cep::save($this->data)) $this->data['cep_novo'] = "<font color='green'>(Cep novo)</font>";                    
                     } 
 
                 }     
@@ -59,6 +61,8 @@
                 $this->html  = str_replace('{bairro}', $this->data['bairro'], $this->html);
                 $this->html  = str_replace('{rua}', $this->data['logradouro'], $this->html);
                 $this->html  = str_replace('{ibge}', $this->data['ibge'], $this->html); 
+                $this->html  = str_replace('{ddd}', $this->data['ddd'], $this->html); 
+                $this->html  = str_replace('{cep_novo}', $this->data['cep_novo'] ?? null, $this->html); 
             }
             
             echo $this->html;

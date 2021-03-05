@@ -77,19 +77,22 @@ class Cep
     {
         try
         {
-            if(!empty($dados_cep['cep']))
+            extract($dados_cep);
+            if(!empty($cep))
             {
             $conn = self::getConnection();
 
-            $cep = addslashes($dados_cep['cep']);
-            $uf = addslashes($dados_cep['uf']);
-            $localidade = addslashes($dados_cep['localidade']);
-            $bairro = addslashes($dados_cep['bairro']);
-            $logradouro = addslashes($dados_cep['logradouro']);
-            $ibge = addslashes($dados_cep['ibge']);
+            $cep = addslashes($cep);
+            $uf = addslashes($uf);
+            $localidade = addslashes($localidade);
+            $bairro = addslashes($bairro);
+            $logradouro = addslashes($logradouro);
+            $ibge = addslashes($ibge);
+            $ddd = addslashes($ddd);
+            
                   
-            $sql = "INSERT INTO cep (cep, uf, localidade, bairro, logradouro, ibge) 
-            VALUES  ('$cep', '$uf', '$localidade', '$bairro',  '$logradouro', '$ibge') ;";
+            $sql = "INSERT INTO cep (cep, uf, localidade, bairro, logradouro, ibge, ddd) 
+            VALUES  ('$cep', '$uf', '$localidade', '$bairro',  '$logradouro', '$ibge', '$ddd') ;";
             
             return $conn->query($sql);
             }
