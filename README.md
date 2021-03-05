@@ -13,8 +13,4 @@ Observações:<br>
 Melhorias futuras:<br>
 - Realizar a busca utilizando AJAX;<br>
 - Melhorar Layout das telas;<br>
-<<<<<<< HEAD
 - Criar uma tela inicial com as opções (Buscar endereço pelo CEP, Buscar endereço pela cidade, listar todos os CEPs cadastrados);<br>
-=======
-- Criar uma tela inicial com as opções (Buscar endereço pelo CEP, Buscar endereço pela cidade, listar todos os CEPs cadastrados);<br>
->>>>>>> origin
