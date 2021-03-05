@@ -105,5 +105,23 @@ class Cep
             print $e->getMessage();
         }
     }
+
+    public static function all()
+    {
+        try
+        {
+            $conn = self::getConnection();
+            
+            $result = $conn->query("select * from cep ORDER BY id desc");
+            return $result->fetchAll();
+            
+
+        $conn = null;
+        }
+        catch (PDOException $e)
+        {
+            print $e->getMessage();
+        }
+    }
     
 }

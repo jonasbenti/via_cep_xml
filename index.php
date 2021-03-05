@@ -19,5 +19,5 @@ if (class_exists($classe))
     $pagina->show();
 }
 else {
-    header("Location: index.php?class=CepForm");
+    header("Location: index.php?class=InitList");
 }
