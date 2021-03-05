@@ -5,7 +5,7 @@ Requisitos Minimos:<br>
 - PHP7;<br>
 - Mysql 5.7;<br>
 <br>
-Observações:
+Observações:<br>
 - Salvar os CEPs já inseridos no campo de busca é necessario alterar os parâmetros no arquivo config/cep_conf.ini e renomear para cep.ini;
 - Na pasta db esta o dump com alguns CEPs ja inseridos;
 - A pasta images possui 2 imagens do buscador, uma buscando CEPs ja cadastrados no BD e outra buscando CEPs novos atráves da API via_cep; 
@@ -14,11 +14,3 @@ Melhorias futuras:
 - Realizar a busca utilizando AJAX;<br>
 - Melhorar Layout das telas;<br>
 - Criar uma tela inicial com as opções (Buscar endereço pelo CEP, Buscar endereço pela cidade, listar todos os CEPs cadastrados);<br>
-
-
-<br>Observações:
-- Salvar os CEPs já inseridos no campo de busca é necessario alterar os parâmetros no arquivo config/cep_conf.ini e renomear para cep.ini;
-
-- na pasta db esta o dump com alguns CEPs ja inseridos;
-
-
