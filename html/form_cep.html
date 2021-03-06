@@ -8,6 +8,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+    <script src="sweetalert2/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2/dist/sweetalert2.min.css">
 </head>
 <body>
     
@@ -16,7 +18,7 @@
         <form enctype="multipart/form-data"  method="post" action="index.php?class=CepForm&method=findCep">
         <div class="form-group">
             <label>Cep</label>
-            <input name="cep" class="form-control" type="text"style="width: 15%" required onkeypress="$(this).mask('00000-000')">
+            <input name="cep" class="form-control" type="text"style="width: 15%" onkeypress="$(this).mask('00000-000')">
         </div>  
         
         <input type="submit" class="btn btn-primary" value="Buscar CEP">
@@ -24,7 +26,7 @@
         <br><br>
         <div class="form-group">
             <label>Cep {cep_novo}</label>
-            <input name="cep2" class="form-control" readonly="1" type="text"style="width: 15%" value="{cep2}">
+            <input name="cep2" class="form-control" readonly="1" type="text" style="width: 15%" value="{cep2}">
         </div>  
 
         <div class="form-group">
@@ -32,7 +34,6 @@
             <input name="estado" class="form-control" readonly="1" type="text" style="width: 10%"
              value="{estado}">
         </div>
-
 
         <div class="form-group">
             <label>Cidade</label>
@@ -50,7 +51,6 @@
             <label>Rua</label>
             <input name="rua" class="form-control" type="text" style="width: 50%"
              value="{rua}">
-
         </div>     
         
         <div class="form-group">

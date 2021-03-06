@@ -1,8 +1,11 @@
 <?php
 
-spl_autoload_register( function($class){
-    if(file_exists($class. '.php')){
-        require_once $class . '.php';
+spl_autoload_register( function($class)
+{
+    $dir_src = './src/';
+    if(file_exists($dir_src.$class. '.php'))
+    {
+        require_once $dir_src.$class . '.php';
     }
 });
 
@@ -18,6 +21,7 @@ if (class_exists($classe))
     }
     $pagina->show();
 }
-else {
+else 
+{
     header("Location: index.php?class=InitList");
 }

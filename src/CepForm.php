@@ -6,7 +6,8 @@
     private $html;
     private $data;
 
-    public function __construct() {
+    public function __construct() 
+    {
         $this->html = file_get_contents('html/form_cep.html');
         $this->data = [
         'cep' => null,
@@ -19,7 +20,7 @@
         'ddd' => null,
         'cep_novo' => null
         ];
-        }
+    }
 
         public function findCep($param)
         {
@@ -40,7 +41,8 @@
                 }     
 
             } 
-            catch (Exception $e) {
+            catch (Exception $e) 
+            {
                 echo $e->getMessage();
             }
         }
@@ -63,9 +65,7 @@
                 $this->html  = str_replace('{ibge}', $this->data['ibge'], $this->html); 
                 $this->html  = str_replace('{ddd}', $this->data['ddd'], $this->html); 
                 $this->html  = str_replace('{cep_novo}', $this->data['cep_novo'] ?? null, $this->html); 
-            }
-            
-            echo $this->html;
-           
+            }            
+            echo $this->html;           
         }
     }

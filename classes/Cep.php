@@ -40,7 +40,7 @@ class Cep
             $xml = simplexml_load_file($url);
                                                                                                     
             //checa se o cep não existe, neste caso o atributo erro será TRUE
-            if( isset($xml->erro) )
+            if( isset($xml->erro))
             {
                 $xml             = new stdClass;
                 $xml->erro         = TRUE;
@@ -88,8 +88,7 @@ class Cep
             $bairro = addslashes($bairro);
             $logradouro = addslashes($logradouro);
             $ibge = addslashes($ibge);
-            $ddd = addslashes($ddd);
-            
+            $ddd = addslashes($ddd);            
                   
             $sql = "INSERT INTO cep (cep, uf, localidade, bairro, logradouro, ibge, ddd) 
             VALUES  ('$cep', '$uf', '$localidade', '$bairro',  '$logradouro', '$ibge', '$ddd') ;";
@@ -113,8 +112,7 @@ class Cep
             $conn = self::getConnection();
             
             $result = $conn->query("select * from cep ORDER BY id desc");
-            return $result->fetchAll();
-            
+            return $result->fetchAll();            
 
         $conn = null;
         }

@@ -9,16 +9,12 @@ class CepList
     {
         $this->html = file_get_contents('html/list_cep.html');
     }
-
    
     public function load()
     {
         try 
-        {
-                     
-            
-
-           $Ceps = Cep::all();
+        {                  
+            $Ceps = Cep::all();
 
             $items = '';
             foreach ($Ceps as $Cep)
