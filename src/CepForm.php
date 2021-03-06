@@ -1,5 +1,5 @@
     <?php
-    require_once 'classes/Cep.php';
+    require_once './classes/Cep.php';
 
     class Cepform
     {
